@@ -18,7 +18,7 @@ class SiteLoader {
 
     // Organizer to make constructor more organized
     private function initialize() {
-        $this->get_necessary_files();
+        $this->includes();
         $this->init();
     }
 
@@ -45,9 +45,11 @@ class SiteLoader {
         return $page_template;
     }
 
-    private function get_necessary_files() {
+    private function includes() {
         $the_page = $this->get_correct_page();
-        require "$this->root_path/site-helpers.php";
+
+        require "$this->root_path/helper-functions.php";
+
         require "$this->root_path/theme/functions.php";
         require "$this->root_path/theme/$the_page.php";
     }

@@ -1,6 +1,6 @@
 <?php
-define( 'ROOT_OF_SITE', '/site' );
-define( 'ROOT_OF_THEME', ROOT_OF_SITE.'/theme' );
+define( 'ROOT_OF_SITE', __DIR__.'/site' );
+define( 'ROOT_OF_THEME', '/site/theme' );
 
 require_once __DIR__.'/site/site-loader.php';
 ?>
